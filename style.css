@@ -1,0 +1,175 @@
+/*===cssリセット===*/
+body,h1,h2,p{
+  margin: 0;
+}
+img{
+  display: block;
+  vertical-align: middle;
+}
+a{
+  text-decoration: none;
+  display: block;
+}
+
+/*===全体のスタイル===*/
+body{
+  /*文字*/
+  font-family: 'Montserrat', sans-serif;
+  color: #5e6c77;
+  /*背景画像*/
+  background-image: url("image/bg_blessing (1).png");
+  background-size: cover;
+}
+
+/*===全体セクションをまとめるdiv===*/
+.main_section{
+  width: 980px;
+  background: white;
+  margin: 50px auto;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, .2);
+}
+/*===上のパート===*/
+.top_section{
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+  height: 500px;
+}
+
+/*===タイトル===*/
+.main_title{
+  text-align: center;
+  position: absolute; /*環境によって中央にならないので要修正*/
+  top: calc(70px + 50px);
+  left: calc(50% - 185px/2); /*画面全体の左から５０％の位置 引く フォントの横幅の半分 足す .main_sectionのmargin_top*/
+  font-family: 'Yellowtail', cursive;
+  color: white;
+}
+
+/*===プロフィール画像===*/
+.main_img{
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  box-sizing: border-box;
+  border: 8px solid white;
+  position: absolute; /*中央によって無い*/
+  top: calc(250px - 100px + 50px);
+  left: calc(50% - 100px);
+}
+
+/*===プロフィール名===*/
+.my_name{
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: calc(360px + 50px);
+  left: calc(50% - 35px);
+}
+
+/*===職業===*/
+.my_jobs{
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: calc(380px + 50px);
+  left: calc(50% - 231px/2);
+}
+
+/*===アバウトエリア===*/
+.about_section{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.about_title{
+  color: #ffb6a5;
+  margin-bottom:15px;
+}
+.about_detail{
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+/*===メッセージエリア===*/
+.message_section{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+.message_title{
+  color: #ffb6a5;
+  margin-bottom: 15px;
+}
+.message_img{
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  box-sizing: border-box;
+  border: 5px solid white;
+  box-shadow: 0 5px 30px rgba(116, 117, 127, 0.3);
+  margin-left: auto;
+  margin-right: auto;
+}
+.message_detail{
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+/*===フッター===*/
+.footer_section{
+  background: #74757f;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: white;
+}
+
+/*===ボタン===*/
+.button{
+  width: 200px;
+  background: white;
+  color: #ffb6a5;
+  text-align: center;
+  padding: 15px;
+  border-radius: 30px;
+  position: absolute;
+  top: calc(500px - 49px/2 + 50px);
+  left: calc(50% - 230px/2);
+  box-shadow: 0 5px 30px rgba(146, 170, 249, 0.5);
+}
+
+/*===works===*/
+.works_section{
+  padding: 0 30px;
+}
+.work_article_wrapper{
+  color: #5e6c77;
+}
+.works_title{
+  text-align: center;
+  color: #ffb6a5;
+  margin-bottom: 15px;
+}
+.works_box_list{
+  padding-left: 0px;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+  list-style-type: none;
+}
+.works_box_list li{
+  padding: 10px;
+  box-sizing: border-box;
+	margin: 0 30px 30px 0;
+	background-color: #dfdfdf;
+  width: calc(33.3333333% - 30px * 2 / 3);
+}
+.works_box_list li:nth-child(3n+3){
+  margin-right: 0;
+}
+.works_img{
+  width: 100%;
+}
