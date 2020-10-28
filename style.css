@@ -28,18 +28,17 @@ body{
   margin: 50px auto;
   box-shadow: 0 5px 30px rgba(0, 0, 0, .2);
 }
-@media only screen and (max-width:767px) {
+@media only screen and (max-width:767px) { /*タブレット縦までのサイズ*/
   .main_section{
     width: 100%;
     margin: 0 auto;
 
   }
   }
-  @media only screen and (max-width:989px) {
+  @media only screen and (max-width:979px) {/*980px以下で崩れないように*/
     .main_section{
       width: 90%;
       margin: 0 auto;
-  
     }
     }
 
@@ -105,6 +104,11 @@ body{
   margin-right: auto;
   text-align: left;
 }
+@media only screen and (max-width:499px) {/*width500未満で余白が無くなる*/
+  .about_detail{
+    width: 90%;
+  }
+  }
 
 /*===メッセージエリア===*/
 .message_section{
@@ -133,6 +137,11 @@ body{
   margin-right: auto;
   text-align: left;
 }
+@media only screen and (max-width:499px) {/*width500未満で余白が無くなる*/
+  .message_detail{
+    width: 90%;
+  }
+  }
 
 /*===フッター===*/
 .footer_section{
@@ -141,7 +150,11 @@ body{
   padding-bottom: 10px;
   text-align: center;
   color: white;
+  /*worksでhoverアクションすると背景が切れるため*/
+  margin-top: 100px;
 }
+
+
 
 /*===ボタン===*/
 .button{
@@ -186,13 +199,29 @@ body{
   width: calc(50% - 30px * 1 / 2);
   transition: 1s;
 }
+@media only screen and (max-width:767px) {/*タブレット以下はworksの画像を縦に並べる*/
+  .works_box_list li{
+    width: 100%;
+    margin: 0 auto;
+  }
+  }
 .works_box_list li:nth-child(2n+2){
   margin-right: 0;
 }
+@media only screen and (max-width:767px) {/*タブレット以下はworksの画像を縦に並べる*/
+  .works_box_list li{
+    margin-right: auto;
+  }
+  }
 .works_img{
   height: 225px;
   width: 100%;
 }
+@media only screen and (max-width:979px) {
+  .works_img{
+    object-fit: cover;
+  }
+  }
 .work_infomation{
   height: 0;
   opacity: 0;
