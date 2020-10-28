@@ -31,14 +31,14 @@ body{
 @media only screen and (max-width:767px) { /*タブレット縦までのサイズ*/
   .main_section{
     width: 100%;
-    margin: 0 auto;
+    margin: 50px auto;
 
   }
   }
   @media only screen and (max-width:979px) {/*980px以下で崩れないように*/
     .main_section{
       width: 90%;
-      margin: 0 auto;
+      margin: 50px auto;
     }
     }
 
