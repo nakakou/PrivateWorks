@@ -19,6 +19,7 @@ body{
   /*背景画像*/
   background-image: url("image/bg_blessing (1).png");
   background-size: cover;
+  min-height:100vh; /*workの表示、非表示をする時背景が切れてしまうため*/
 }
 
 /*===全体セクションをまとめるdiv===*/
@@ -31,14 +32,11 @@ body{
 @media only screen and (max-width:767px) { /*タブレット縦までのサイズ*/
   .main_section{
     width: 100%;
-    margin: 50px auto;
-
   }
   }
   @media only screen and (max-width:979px) {/*980px以下で崩れないように*/
     .main_section{
       width: 90%;
-      margin: 50px auto;
     }
     }
 
@@ -174,6 +172,13 @@ body{
 .works_section{
   padding: 0 30px;
 }
+@media only screen and (max-width:767px) {
+  .works_section{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
 .work_article_wrapper{
   color: #5e6c77;
 }
@@ -199,7 +204,7 @@ body{
   width: calc(50% - 30px * 1 / 2);
   transition: 1s;
 }
-@media only screen and (max-width:767px) {/*タブレット以下はworksの画像を縦に並べる*/
+@media only screen and (max-width:767px) {/*タブレット未満はworksの画像を縦に並べる*/
   .works_box_list li{
     width: 100%;
     margin: 0 auto;
@@ -222,7 +227,7 @@ body{
     object-fit: cover;
   }
   }
-.work_infomation{
+.work_infomation *{ /*子要素の高さが残ってしまうため*/
   height: 0;
   opacity: 0;
   animation-name: fade-out;
@@ -233,15 +238,16 @@ body{
     height: auto;
     opacity: 1;
   }
-  50%{
+  50% {
     height: 50%;
   }
   100% {
     height: 0;
     opacity: 0;
+    display: none;
   }
 }
-.work_article_wrapper:hover .work_infomation{
+.works_box_list li:hover .work_infomation *{
   height: auto;
   opacity: 1;
   animation-name: fade-in;
